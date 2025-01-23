@@ -1,50 +1,26 @@
-# React + TypeScript + Vite
+# Animeintresse App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+En React-applikation som visar en lista med anime-objekt. Varje anime visas som ett "flip card"-element där användaren kan se en bild på framsidan och detaljer som titel, beskrivning och status (sedd eller inte sedd) på baksidan.
 
-Currently, two official plugins are available:
+## Funktioner
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamisk Banner**: Visar antingen en bild eller en video som banner.
+- **Fade Animation**: Använder CSS för att skapa en mjuk övergång mellan olika media.
+- **Interaktiv Knapp**: En knapp som låter användaren byta mellan olika bilder eller videor.
+information.
+- **Dynamisk Lista**: Använder `map` för att rendera en lista med anime-objekt dynamiskt.
+- **Statusindikator**: Visar om animen är sedd eller inte med en ikon och stil.
+- **Responsiv Design**: Använder CSS för att skapa ett snyggt och responsivt användargränssnitt.
+- **Flip Cards**: Varje anime visas som ett interaktivt kort som kan vändas för att visa mer 
 
-## Expanding the ESLint configuration
+## Teknologier
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Används för att bygga användargränssnittet.
+- **TypeScript**: Används för att skriva typsäker kod.
+- **CSS**: Används för styling och flip card-effekten.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Klona repositoryt:
+   ```bash
+   git clone https://github.com/kashef0/react-Kmoment01.git
