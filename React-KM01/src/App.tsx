@@ -1,18 +1,22 @@
 import { useState } from "react";
 import Banner from "./components/Banner";
 import ListGroup from "./components/ListGroup";
+import Footer from "./components/Footer";
 function App() {
-  // state hook to byta bakgrund imag banner component
+  // state hook för att spåra om bilden är växlad
   const [switchImg, setSwitchImg] = useState(true);
+  // bilder's Urls
   const imgUrlAdress = [
     "https://cdn.pixabay.com/photo/2024/02/18/13/13/ai-generated-8581189_1280.jpg",
-    "https://cdn.pixabay.com/photo/2024/05/09/08/07/ai-generated-8750167_1280.jpg",
+    "https://cdn.pixabay.com/video/2021/08/10/84574-586228759_large.mp4",
   ];
+
+  // funktion för att byta img i banner komponent
   const handleSwitch = () => {
     setSwitchImg(!switchImg);
-    console.log(switchImg);
   };
 
+  // listor av animes
   const animeList = [
     {
       id: 1,
@@ -61,15 +65,19 @@ function App() {
     },
   ];
 
+  // utvecklare namn
+  const UtvecklareName = 'Mohamed Abokashef';
+
   return (
     <>
       <Banner
         title="Reactjs-Kmoment01"
-        isClicked={switchImg}
-        ImgUrl={switchImg ? imgUrlAdress[0] : imgUrlAdress[1]}
+        isClicked={switchImg} //  Passera switchImg som isClicked till banner component
+        ImgUrl={switchImg ? imgUrlAdress[0] : imgUrlAdress[1]} // Växla mellan två bilder
         onSwitch={handleSwitch}
       />
       <ListGroup title={'Min AnimeList'} ListOfAnime={animeList} />
+      <Footer Utvecklare={UtvecklareName}/>
     </>
   );
 }

@@ -31,20 +31,22 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  transform: translateX(100%);
-  transition: translateX 1s ease-in-out;
+  overflow: hidden;
+
 }
 
-.banner-imag img {
-  filter: brightness(60%);
+.banner-imag img, .video-banner {
+  filter: brightness(50%);
   max-width: 1920px;
   width: 100%;
-  height: 50dvh;
+  height: 60dvh;
+  object-fit: fill;
 }
 
-.banner-image.active {
-  transform: translateX(-100%);
+.clear {
+    filter: brightness(100%);
 }
+
 
 .banner-text {
   text-align: center;

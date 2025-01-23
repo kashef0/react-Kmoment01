@@ -1,5 +1,6 @@
 import "./ListGroup.css";
 
+// egenskaperna för en anime
 interface Props {
   id: number;
   title: string;
@@ -7,8 +8,9 @@ interface Props {
   isWatch: boolean;
   imageURL: string;
 }
-
+// en lista med anime-objekt
 interface ListAnime {
+  //En array med anime objekt
   ListOfAnime: Props[];
   title: string
 }
@@ -20,6 +22,7 @@ const ListGroup = ({ title, ListOfAnime }: ListAnime) => {
         <h1>{title}</h1>
       </div>
       <div className="flip-card-container">
+      {/* Mappa över ListOfAnime och rendera varje item som ett listobjekt */}
         {ListOfAnime.map((anime) => (
           <div className="flip-card" key={anime.id}>
             <div className="flip-card-inner">
@@ -29,15 +32,16 @@ const ListGroup = ({ title, ListOfAnime }: ListAnime) => {
               <div className="flip-card-back">
                 <h1>{anime.title}</h1>
                 <p>
-                  <strong className="description">Beskrivning: </strong>{" "}
+                  <strong className="description">Beskrivning: </strong> 
                   {anime.description}
                 </p>
                 <p>
                   status:{" "}
+                  {/* kontrollera om isWatch true eller false */}
                   {anime.isWatch ? (
-                    <del className="watched">sett ✓</del>
+                    <del className="watched"> Sedd ✓</del>
                   ) : (
-                    <strong className="not-watched">inte sett ✗</strong>
+                    <strong className="not-watched"> Inte sedd ✗</strong>
                   )}
                 </p>
               </div>
