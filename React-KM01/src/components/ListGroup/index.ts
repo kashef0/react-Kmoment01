@@ -1,3 +1,3 @@
-import ListGroup from './ListGroup.css'
+import ListGroup from './ListGroup'
 
 export default ListGroup;
